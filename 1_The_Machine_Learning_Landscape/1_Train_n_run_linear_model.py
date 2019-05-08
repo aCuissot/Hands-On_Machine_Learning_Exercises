@@ -3,11 +3,21 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import sklearn
+import math
+import sklearn.linear_model as sklm
 
 
 def prepare_country_stats(oecd, gdp):
     merge = pd.merge(gdp, oecd, how='outer', on='Country')
     return merge
+
+
+def clear_NaN_values(Xc, yc):
+    Xc = Xc[np.logical_not(np.isnan(yc))]
+    yc = yc[np.logical_not(np.isnan(yc))]
+    yc = yc[np.logical_not(np.isnan(Xc))]
+    Xc = Xc[np.logical_not(np.isnan(Xc))]
+    return Xc.reshape((-1, 1)), yc.reshape((-1, 1))
 
 
 # Load the data
@@ -23,13 +33,16 @@ country_stats = prepare_country_stats(oecd_bli, gdp_per_capita)
 #     print(country_stats)
 X = np.c_[country_stats["Unnamed: 7"]]  # GDP
 y = np.c_[country_stats["Value"]]  # Life satisfaction
+
+X, y = clear_NaN_values(X, y)
 # Visualize the data
+
 country_stats.plot(kind='scatter', x='Unnamed: 7', y='Value')
 plt.show()
 # Select a linear model
-lin_reg_model = sklearn.linear_model.LinearRegression()
+lin_reg_model = sklm.LinearRegression()
 # Train the model
 lin_reg_model.fit(X, y)
 # Make a prediction for Cyprus
 X_new = [[22587]]  # Cyprus' GDP per capita
-print(lin_reg_model.predict(X_new))  # outputs [[ 5.96242338]]
+print(lin_reg_model.predict(X_new))  # outputs [[6.24626328]]
