@@ -13,3 +13,5 @@ Pycharm 2019.1.1 IDE
 Jupyter Notebook section comes from this repository:
 
 https://github.com/ageron/handson-ml
+
+The Jupyter part and the rest are independants
