@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import sklearn
-import math
 import sklearn.linear_model as sklm
 
 
@@ -41,8 +40,17 @@ country_stats.plot(kind='scatter', x='Unnamed: 7', y='Value')
 plt.show()
 # Select a linear model
 lin_reg_model = sklm.LinearRegression()
+
 # Train the model
 lin_reg_model.fit(X, y)
+
 # Make a prediction for Cyprus
 X_new = [[22587]]  # Cyprus' GDP per capita
 print(lin_reg_model.predict(X_new))  # outputs [[6.24626328]]
+
+# Trying a KNN (average of the N nearest neighbor, here N = 3
+
+clf = sklearn.neighbors.KNeighborsRegressor(n_neighbors=3)
+clf.fit(X, y)
+print(clf.predict(X_new))  # outputs [[5.8]]
+
