@@ -223,18 +223,19 @@ y_multilabel = np.c_[y_train_large, y_train_odd]
 knn_clf = KNeighborsClassifier()
 knn_clf.fit(X_train, y_multilabel)
 print(knn_clf.predict([X[36000]]))
-# y_train_knn_pred = cross_val_predict(knn_clf, X_train, y_train, cv=3)
-# print(f1_score(y_train, y_train_knn_pred, average="macro"))
+# take a lot of time, for me around 1h30
+y_train_knn_pred = cross_val_predict(knn_clf, X_train, y_train, cv=3)
+print(f1_score(y_train, y_train_knn_pred, average="macro"))
 
 # MULTI OUTPUT CLASSIFICATION
 
 noise = rnd.randint(0, 100, (len(X_train), 784))
-X_train_mod = np.append(X_train, noise)
+X_train_mod = X_train + noise
 noise = rnd.randint(0, 100, (len(X_test), 784))
-X_test_mod = np.append(X_test, noise)
+X_test_mod = X_test + noise
 y_train_mod = X_train
 y_test_mod = X_test
 knn_clf.fit(X_train_mod, y_train_mod)
-clean_digit = knn_clf.predict([X_test_mod[X[36000]]])
+clean_digit = knn_clf.predict([X_test_mod[5500]])
 plot_digit(clean_digit)
 plt.show()
