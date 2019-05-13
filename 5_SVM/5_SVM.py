@@ -7,7 +7,7 @@ from sklearn.svm import LinearSVC
 iris = datasets.load_iris()
 X = iris["data"][:, (2, 3)]  # petal length, petal width
 y = (iris["target"] == 2).astype(np.float64)  # Iris-Virginica
-svm_clf = Pipeline((
+svm_clfeline((
     ("scaler", StandardScaler()),
     ("linear_svc", LinearSVC(C=1, loss="hinge")),
 ))
@@ -41,5 +41,5 @@ rbf_kernel_svm_clf = Pipeline((
     ("scaler", StandardScaler()),
     ("svm_clf", SVC(kernel="rbf", gamma=5, C=0.001))
 ))
-rbf_kernel_svm_clf.fit(X, y)
+rbf_kernel_svm_clf.fit(X,  y)
 print(rbf_kernel_svm_clf.predict([[5.5, 1.7]]))
