@@ -8,9 +8,9 @@ import keras
 seq_length = 64
 
 x_train = np.random.random((1000, seq_length, 100))
-y_train = keras.utils.to_categorical(np.random.randint(1, size=(1000,)))
+y_train = keras.utils.to_categorical(np.random.randint(1, size=1000))
 x_test = np.random.random((100, seq_length, 100))
-y_test = keras.utils.to_categorical(np.random.randint(1, size=(100,)))
+y_test = keras.utils.to_categorical(np.random.randint(1, size=100))
 
 model = Sequential()
 model.add(Conv1D(64, 3, activation='relu', input_shape=(seq_length, 100)))

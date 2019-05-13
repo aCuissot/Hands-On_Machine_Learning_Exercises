@@ -10,7 +10,7 @@ y_test = keras.utils.to_categorical(np.random.randint(10, size=(100, 1)), num_cl
 
 model = Sequential()
 
-model.add(Dense(units=64, activation='relu', input_dim=100))
+model.add(Dense(units=64, activation='relu', input_dim=20))
 model.add(Dense(units=10, activation='softmax'))
 
 model.compile(loss='categorical_crossentropy',
