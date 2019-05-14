@@ -1,4 +1,4 @@
-from keras.applications.vgg19 import VGG19
+from keras.applications.vgg19 import VGG19, decode_predictions
 from keras.preprocessing import image
 from keras.applications.vgg19 import preprocess_input
 from keras.models import Model
