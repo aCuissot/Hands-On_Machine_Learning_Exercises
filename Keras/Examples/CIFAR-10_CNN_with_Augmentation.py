@@ -90,6 +90,7 @@ y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 
 model = Sequential()
+model.add(ZeroPadding2D((1,1),input_shape=(224,224,3)))
 model.add(Lambda(augment_2d,
                  input_shape=x_train.shape[1:],
                  arguments={'rotation': 8.0, 'horizontal_flip': True}))
