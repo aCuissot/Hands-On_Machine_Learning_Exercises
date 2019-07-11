@@ -15,3 +15,5 @@ Jupyter Notebook section comes from the official repository:
 https://github.com/ageron/handson-ml
 
 The Jupyter part and the rest are independants
+
+I ll finish that later, let me a month
