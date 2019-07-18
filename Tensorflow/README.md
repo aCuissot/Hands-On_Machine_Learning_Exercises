@@ -5,6 +5,7 @@ Table of contents:
 
 ##### 1. Learn and use machine learning
 ###### 1.1 Basic classification
+Classify some clothes using a very basic model
 ###### 1.2 Text classification
 ###### 1.3 Regression
 ###### 1.4 Overfitting and underfitting
@@ -42,8 +43,8 @@ Table of contents:
 ###### 7.4 Recurrent neuronal network
 ###### 7.5 Drawing classification
 ###### 7.6 Simple audio recognition
-###### 7.7 Neural machine translation
-##### 8. Load data###### 7.1 Text generation with RNN
+###### 7.7 Neural machine translationk
+##### 8. Load data
 ###### 8.1 Load images
 ###### 8.2 TFRecords and tf.Example
 ##### 9. Data representation
