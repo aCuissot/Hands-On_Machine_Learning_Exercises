@@ -1,4 +1,4 @@
-# Hands-On_Machine_Learning_Exercises
+# Hands-On Machine Learning Exercises
 
 Trying to do Hands-on Machine Learning book's exercices
 
@@ -16,4 +16,4 @@ https://github.com/ageron/handson-ml
 
 The Jupyter part and the rest are independants
 
-I ll finish that later, let me a month
+I ll finish that later, around 15 of august
