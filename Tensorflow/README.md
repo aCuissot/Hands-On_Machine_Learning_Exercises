@@ -7,8 +7,11 @@ Table of contents:
 ###### 1.1 Basic classification
 Classify some clothes using a very basic model
 ###### 1.2 Text classification
+Not working with tensorflow `1.3.*` and `1.4.*`
 ###### 1.3 Regression
 ###### 1.4 Overfitting and underfitting
+Trying to see diffenrences between two models
+Not working with tensorflow `1.3.*` and `1.4.*`
 ###### 1.5 Save and restore models
 ##### 2. Research and experimentation
 ###### 2.1 Eager execution
