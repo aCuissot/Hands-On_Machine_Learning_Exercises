@@ -15,7 +15,7 @@ Not working with tensorflow `1.3.*` and `1.4.*`
 ###### 1.5 Save and restore models
 ##### 2. Research and experimentation
 ###### 2.1 Eager execution
-###### 2.2 Automatic differentiation
+###### 2.2 Automatic differentiation and gradient tape
 ###### 2.3 Custom training: basics
 ###### 2.4 Custom layers
 ###### 2.5 Custom training: walkthrough
